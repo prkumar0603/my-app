@@ -1,0 +1,27 @@
+<hr>
+<h2>Inbuilt Pipes !! </h2>
+
+<h3>
+    {{ d1 }} <br>
+    {{ d1 | date: "fullDate"}} <br>
+    {{ d1 | date: "dd/mm/yy"}} ---  mm is for minute. for month use MM <br> 
+    {{ d1 | date: "dd/MM/yy"}} <br>
+    {{ d1 | date: "MM/dd/yyyy"}} --- any combination possible <br>
+    <br>
+    {{ str }} <br>
+    {{ str | lowercase }} <br>
+    {{ str | uppercase }} <br>
+    {{ str | slice : 3 }} <br>
+    {{ str | slice : 5 : 11 }} -- start, end-1 <br>
+    <br>
+    {{ amt }} <br>
+    {{ amt | currency }} <br>
+    {{ amt | currency : "EUR" }} <br>
+    {{ amt | currency : "INR" }} <br>
+    {{ amt | currency : "SAR" }} --- since there is not symbol for SAR, it is coming. <br>
+    <br>
+    {{ emp }} <br>
+    {{emp | json }} <br>
+    <br>
+    {{ d1 | date:"fullDate" | uppercase | slice : 0 : 8 }} --- chaining of pipes <br>
+</h3>

@@ -1,0 +1,13 @@
+<hr>
+<h2>Event Binding !!!</h2>
+<h5>One way Binding using round bracket : HTML --> TS <br>
+    Also local template reference using # </h5>
+
+<h3>
+    <!-- giving alias name using #. local template reference -->
+    Enter msg : <input type="text" #myinput>
+    <button (click)="abc(myinput.value)">GREET</button><br>
+
+    Change : <input #sm (change)="xyz(sm.value)">
+
+</h3>

@@ -1,0 +1,15 @@
+<hr><hr>
+<h2>Two Way Processing !!! </h2>
+<h5>Instead of using the two way binding using ng Model, we will use one way binding. <br>
+    Also used local template referencing using # to pass the data from html to ts file.
+</h5>
+<h3>
+
+    Enter First Name : <input type="text" #fn><br>
+    Enter Last Name : <input type="text" #ln><br>
+    <button (click)="club(fn.value, ln.value)">GREET</button>
+</h3>
+
+<!-- If there is requirement of any property tag, then we can use property binding. 
+    or else we can use interpolation. -->
+<h3> Welcome ! {{ fullname }}</h3>
