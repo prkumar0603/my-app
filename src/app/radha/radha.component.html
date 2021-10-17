@@ -1,0 +1,10 @@
+<hr>
+<h2> Chatting Demo - Radha </h2>
+<h5>Chatting service is used by ram and shyam. We can use a service with as many component as we want. <br>
+    so we added a new component radha and are using the service.
+</h5>
+<input type="text" #mi>
+<button (click)="sendMessage(mi.value)">Send Message</button> <br>
+
+<!-- this is directive. *ngFor -->
+<p *ngFor="let msg of cs.messages">{{ msg }}</p>

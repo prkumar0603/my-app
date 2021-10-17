@@ -1,0 +1,45 @@
+<hr>
+<h2>Directives Demo</h2>
+<p>Attributes Directives are <b>ngClass</b> and <b>ngStyle</b></p> <br>
+
+<div style="display: flex;">
+    <div class="brdr bg">The class attributes are hard-coded.</div>
+
+    <div [ngClass]="{'bg': bgc, 'brdr': brd}">ngClass attribute is variabels.</div>
+    <div [ngClass]="{'bg': !bgc, 'brdr': !brd}">ngClass attribute is variabels.</div>
+
+    <div [ngStyle]="{'background-color': 'green'}">ngStyle Attribute</div>
+    <div [ngStyle]="{'background-color': bg}">ngStyle Attribute is variable</div>
+</div>
+
+<hr><hr>
+
+<p>Structural Directives are <b>ngIf</b>, <b>ngFor</b> and <b>ngSwitch</b> </p>
+<h4 (click)="showAndHide()">Click me to LOGIN</h4>
+
+<span *ngIf="switch">
+    <login></login>
+</span>
+<hr>
+
+<span [ngSwitch]="ch">
+    <p *ngSwitchCase="1">Good Morning</p>
+    <p *ngSwitchCase="2"><app-interpolation></app-interpolation></p>
+    <p *ngSwitchCase="3"><app-property-binding></app-property-binding></p>
+    <p *ngSwitchCase="4"><app-event-binding></app-event-binding></p>
+    <p *ngSwitchDefault>Have a Good Day !!!</p>
+</span>
+<h4 (click)="greet()">Click me to CHANGE!!</h4>
+<hr>
+
+<ul>
+    <li *ngFor="let player of players">{{ player }}</li>
+</ul>
+
+<p *ngFor="let player of players; let i=index">{{i+1}}) {{ player }}</p>
+
+<span *ngFor="let player of players; let i=index">{{i+1}} -  {{ player }} <br> </span>
+<!-- <span *ngFor="let player in players"> {{ player }} <br> </span> -- not working -->
+<!-- Diff b/w for and in - in gets the index position(0,1,2,3) AND of gives the value -->
+
+<p>we can also have custom directives.</p>

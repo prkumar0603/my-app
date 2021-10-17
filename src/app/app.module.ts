@@ -18,10 +18,15 @@ import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import { MySquarePipe } from './pipes/my-square.pipe';
 import { MyCubePipe } from './pipes/my-cube.pipe';
 import { MyPowerPipe } from './pipes/my-power.pipe';
+import { RamComponent } from './ram/ram.component';
+import { ShyamComponent } from './shyam/shyam.component';
+import { RadhaComponent } from './radha/radha.component';
+import { LogService } from './services/log.service';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
-    // register here any new file created for being part of application
+    // import and register here any new file created for being part of application
     AppComponent,
     ParentComponent,
     LoginComponent,
@@ -38,14 +43,19 @@ import { MyPowerPipe } from './pipes/my-power.pipe';
     MySquarePipe,
     MyCubePipe,
     MyPowerPipe,
+    RamComponent,
+    ShyamComponent,
+    RadhaComponent,
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  // creating instance of service here and injecting to components. comma seperated
+  providers: [LogService,  ],
   
-  // starting module
+  // root component declare here
   // bootstrap: [AppComponent]
   bootstrap: [ParentComponent, LoginComponent]
 })

@@ -1,0 +1,11 @@
+<hr> <hr>
+<h2> Chatting Demo - RAM </h2> <br>
+<p>If we want some logic to be executed by all the components, then we use services and 
+    inject it to the components. services are logic or data which is shared by components. 
+    we also have buit in services like httpService. which we need to import first then use.</p>
+
+<input type="text" #mi>
+<button (click)="sendMessage(mi.value)">Send Message</button> <br>
+
+<!-- this is directive. *ngFor -->
+<p *ngFor="let msg of cs.messages">{{ msg }}</p>

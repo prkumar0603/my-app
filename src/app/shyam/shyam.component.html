@@ -1,0 +1,7 @@
+<hr>
+<h2> Chatting Demo - Shyam </h2>
+<input type="text" #mi>
+<button (click)="sendMessage(mi.value)">Send Message</button> <br>
+
+<!-- this is directive. *ngFor -->
+<p *ngFor="let msg of cs.messages">{{ msg }}</p>
